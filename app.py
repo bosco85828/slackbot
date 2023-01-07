@@ -53,7 +53,7 @@ def send_message(channel,ts, text):
     if "waflist" in text:
         
         os.system(""" 
-        curl "https://docs.google.com/spreadsheets/d/e/2PACX-1vQFo3cneii8CkIaLP-kClutWu42JzRsaw1SaLYJSRQXf0EX9RyE6psTq1HZUw3WieV9Ehqh1WQ1t11j/pub?output=csv" -Ls | tr -d ' ' |  sort -V | uniq  > {}/waflist.txt
+        curl "google表單連結" -Ls | tr -d ' ' |  sort -V | uniq  > {}/waflist.txt
         """.format(path))
         file_name = '{}/waflist.txt'.format(path)
         msg = "附檔為 WAF ip 網段"
